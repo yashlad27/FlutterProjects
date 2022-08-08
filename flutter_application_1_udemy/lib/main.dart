@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable, sort_child_properties_last, deprecated_member_use
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -7,6 +9,13 @@ void main() {
 // void main() => runApp(MyApp());
 // short hand notation ( only for functions with one line of expressio )
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  // adding functions:
+  void answerQues() {
+    print('Answer chosen-> ');
+  }
+
   @override
   // adding a method not properties
   // in flutter whole app is a widget!
@@ -18,9 +27,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('My First App'),
+          title: const Text('My First App'),
         ),
-        body: Column(children: [
+        body: Column(children: const [
           Text('The Questions!'),
           RaisedButton(
             child: Text('Answer-1'),
