@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
 
   // adding functions:
   void answerQues() {
-    print('Answer chosen-> ');
+    print('Answer chosen!');
   }
 
   @override
@@ -32,18 +32,24 @@ class MyApp extends StatelessWidget {
         body: Column(children: [
           const Text('The Questions!'),
           RaisedButton(
-            child: Text('Answer-1'),
-            onPressed:
-                answerQues, // only give name of function when passing it as an argument no paraenthesis required
+            child: const Text('Answer-1'),
+            onPressed: answerQues,
+            // method-01: named function
+            // only give name of function when passing it as an argument no paraenthesis required
             // works like a pointer!
           ),
           RaisedButton(
             child: const Text('Answer-2'),
-            onPressed: answerQues,
+            onPressed: () => print('Answer2 is chosen!'),
+            // method-02: no name function!
           ),
           RaisedButton(
             child: const Text('Answer-3'),
-            onPressed: answerQues,
+            onPressed: () {
+              print('Answer-3 is chosen!');
+            },
+            // method-03: {} -> curly braces
+            // curly braces for longer function body!
           ),
           // raised button is depracated!!!
           // ElevatedButton(onPressed: onPressed, child: child)
