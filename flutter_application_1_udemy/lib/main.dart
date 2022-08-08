@@ -1,4 +1,4 @@
-// ignore_for_file: unused_local_variable, sort_child_properties_last, deprecated_member_use
+// ignore_for_file: unused_local_variable, sort_child_properties_last, deprecated_member_use, avoid_print
 
 import 'package:flutter/material.dart';
 
@@ -9,7 +9,7 @@ void main() {
 // void main() => runApp(MyApp());
 // short hand notation ( only for functions with one line of expressio )
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  //const MyApp({Key? key}) : super(key: key);
 
   // adding functions:
   void answerQues() {
@@ -29,19 +29,21 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('My First App'),
         ),
-        body: Column(children: const [
-          Text('The Questions!'),
+        body: Column(children: [
+          const Text('The Questions!'),
           RaisedButton(
             child: Text('Answer-1'),
-            onPressed: null,
+            onPressed:
+                answerQues, // only give name of function when passing it as an argument no paraenthesis required
+            // works like a pointer!
           ),
           RaisedButton(
-            child: Text('Answer-2'),
-            onPressed: null,
+            child: const Text('Answer-2'),
+            onPressed: answerQues,
           ),
           RaisedButton(
-            child: Text('Answer-3'),
-            onPressed: null,
+            child: const Text('Answer-3'),
+            onPressed: answerQues,
           ),
           // raised button is depracated!!!
           // ElevatedButton(onPressed: onPressed, child: child)
