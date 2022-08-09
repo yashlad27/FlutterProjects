@@ -11,6 +11,7 @@ void main() {
 class MyApp extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
+    // ignore: todo
     // TODO: implement createState
     return MyAppState();
   }
@@ -21,7 +22,10 @@ class MyAppState extends State<MyApp> {
   var questionIndex = 0;
   // adding functions:
   void answerQues() {
-    questionIndex = questionIndex + 1;
+    setState(() {
+      // () -> anonymous function
+      questionIndex = questionIndex + 1;
+    });
     //print('Answer chosen!');
     print(questionIndex);
   }
