@@ -7,8 +7,16 @@ void main() {
 }
 
 // void main() => runApp(MyApp());
-// short hand notation ( only for functions with one line of expressio )
-class MyApp extends StatelessWidget {
+// short hand notation ( only for functions with one line of expression )
+class MyApp extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    return MyAppState();
+  }
+}
+
+class MyAppState extends State<MyApp> {
   //const MyApp({Key? key}) : super(key: key);
   var questionIndex = 0;
   // adding functions:
