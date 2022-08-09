@@ -34,7 +34,8 @@ class MyApp extends StatelessWidget {
         body: Column(children: [
           //const Text('The Questions!'),
           //Text(questions[0]),
-          Text(questions[questionIndex]),
+          Text(questions[
+              questionIndex]), // stateless widget here { only output is given }
           RaisedButton(
             child: const Text('Answer-1'),
             onPressed: answerQues,
@@ -58,7 +59,9 @@ class MyApp extends StatelessWidget {
           RaisedButton(
               // child: const Tab(text: 'Answer-4'),
               child: const Text('Answer-4'),
-              onPressed: answerQues)
+              onPressed: () {
+                print('Answer-4 is chosen!');
+              })
           // raised button is depracated!!!
           // ElevatedButton(onPressed: onPressed, child: child)
         ]),
