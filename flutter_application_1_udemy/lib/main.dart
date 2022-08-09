@@ -10,10 +10,12 @@ void main() {
 // short hand notation ( only for functions with one line of expressio )
 class MyApp extends StatelessWidget {
   //const MyApp({Key? key}) : super(key: key);
-
+  var questionIndex = 0;
   // adding functions:
   void answerQues() {
-    print('Answer chosen!');
+    questionIndex = questionIndex + 1;
+    //print('Answer chosen!');
+    print(questionIndex);
   }
 
   @override
@@ -30,7 +32,9 @@ class MyApp extends StatelessWidget {
           title: const Text('My First App'),
         ),
         body: Column(children: [
-          const Text('The Questions!'),
+          //const Text('The Questions!'),
+          //Text(questions[0]),
+          Text(questions[questionIndex]),
           RaisedButton(
             child: const Text('Answer-1'),
             onPressed: answerQues,
@@ -51,6 +55,10 @@ class MyApp extends StatelessWidget {
             // method-03: {} -> curly braces
             // curly braces for longer function body!
           ),
+          RaisedButton(
+              // child: const Tab(text: 'Answer-4'),
+              child: const Text('Answer-4'),
+              onPressed: answerQues)
           // raised button is depracated!!!
           // ElevatedButton(onPressed: onPressed, child: child)
         ]),
