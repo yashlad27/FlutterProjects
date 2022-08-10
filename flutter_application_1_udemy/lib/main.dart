@@ -1,6 +1,7 @@
 // ignore_for_file: unused_local_variable, sort_child_properties_last, deprecated_member_use, avoid_print
 
 import 'package:flutter/material.dart';
+import './questions.dart';
 
 void main() {
   runApp(MyApp());
@@ -46,7 +47,7 @@ class MyAppState extends State<MyApp> {
         body: Column(children: [
           //const Text('The Questions!'),
           //Text(questions[0]),
-          Text(questions[
+          Question(questions[
               questionIndex]), // stateless widget here { only output is given }
           RaisedButton(
             child: const Text('Answer-1'),
