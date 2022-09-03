@@ -1,11 +1,13 @@
-// ignore_for_file: unused_local_variable, sort_child_properties_last, deprecated_member_use, avoid_print
+// ignore_for_file: unused_local_variable, sort_child_properties_last, deprecated_member_use, avoid_print, unused_import
 
 import 'package:flutter/material.dart';
+import './questions.dart';
+import './answer.dart';
 
 void main() {
   runApp(MyApp());
 }
-
+zx
 // void main() => runApp(MyApp());
 // short hand notation ( only for functions with one line of expressio )
 class MyApp extends StatelessWidget {
@@ -61,7 +63,11 @@ class MyApp extends StatelessWidget {
               child: const Text('Answer-4'),
               onPressed: () {
                 print('Answer-4 is chosen!');
-              })
+              }), // raised button is depracated!!!
+          // ElevatedButton(onPressed: onPressed, child: child)
+          Answer(_answerQues),
+          Answer(_answerQues),
+          Answer(_answerQues),
           // raised button is depracated!!!
           // ElevatedButton(onPressed: onPressed, child: child)
         ]),
